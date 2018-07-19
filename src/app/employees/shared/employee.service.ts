@@ -7,21 +7,24 @@ import {AngularFireDatabase,AngularFireList } from 'angularfire2/database'
 })
 export class EmployeeService {
   employeeList : AngularFireList<any>;
-selectedEmployee : Employee = new Employee();
+  selectedEmployee : Employee = new Employee();
   constructor( private firebase:AngularFireDatabase) { }
 
 getData(){
-  this.employeeList=this.firebase.list('employees');
+  this.employeeList= this.firebase.list('/employees');
   return this.employeeList;
 }
 
 insertEmployee(employee:Employee){
-  this.employeeList.push({
-    name:employee.name,
-    position:employee.position,
-    office:employee.office,
-    salary:employee.salary
-  });
-}
+  console.log(employee);
+  var key=this.firebase.createPushId();
+  this.firebase.list('/employees').push({
+      name:employee.name,
+      position:employee.position,
+      office:employee.office,
+      salary:employee.salary
+    });
+  
+  }
 }
 

@@ -1,3 +1,7 @@
-<p>
-  employee-list works!
-</p>
+
+<ul *ngFor="let emp of employeeList">
+  <li>
+    Name : {{emp.name}} , Position : {{emp.position}} , Office : {{emp.office}}, Salary : {{emp.salary}}
+  </li>
+</ul>
+
