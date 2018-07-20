@@ -1,7 +1,31 @@
+<!-- <table class="table table-bordered table-hover">
+<tr *ngFor="let emp of employeeList">
+  <td>
+    Name : {{emp.name}} 
+  </td>
+  <td>Position : {{emp.position}} </td>
+  <td> Office : {{emp.office}}</td>
+  <td> Salary : {{emp.salary}}</td> -->
+  <!-- <td><a (click)="onEdit(emp)" class=" btn " style="background: none;
+    border: none;"><i class="fa fa-pencil-square-o"></i></a></td>
+  <td><button class="fa fa-trash-o" style="background: none;
+    border: none;"></button></td>
+</tr>
 
-<ul *ngFor="let emp of employeeList">
-  <li>
-    Name : {{emp.name}} , Position : {{emp.position}} , Office : {{emp.office}}, Salary : {{emp.salary}}
-  </li>
-</ul>
+</table> -->
 
+<h6 class="text-center">Employee Register</h6><br/>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let employee of employeeList">
+      <td>{{employee.name}}</td>
+      <td>{{employee.position}}</td>
+      <td>
+        <a class="btn" (click)="onEdit(employee)">
+          <i class="fa fa-pencil-square-o"></i>
+        </a>
+        <a class="btn" (click)="onDelete(employee.$key)">
+          <i class="fa fa-trash-o"></i>
+        </a>
+      </td>
+  </tr>
+</table>

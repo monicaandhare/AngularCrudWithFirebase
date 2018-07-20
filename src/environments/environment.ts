@@ -5,12 +5,19 @@
 export const environment = {
   production: false,
   firebaseConfig : {    
-    apiKey: "AIzaSyBMbjbgIehpgeHmFJqvqS8rpQGvo7qqbYQ",
-    authDomain: "anguarcrud.firebaseapp.com",
-    databaseURL: "https://anguarcrud.firebaseio.com",
-    projectId: "anguarcrud",
-    storageBucket: "anguarcrud.appspot.com",
-    messagingSenderId: "634395509269"
+    // apiKey: "AIzaSyBMbjbgIehpgeHmFJqvqS8rpQGvo7qqbYQ",
+    // authDomain: "anguarcrud.firebaseapp.com",
+    // databaseURL: "https://anguarcrud.firebaseio.com",
+    // projectId: "anguarcrud",
+    // storageBucket: "anguarcrud.appspot.com",
+    // messagingSenderId: "634395509269"
+
+    apiKey: "AIzaSyC-wB4r76fJQvDrAm5EkOIC5bZ8U8R41IY",
+    authDomain: "angularcrud-5866b.firebaseapp.com",
+    databaseURL: "https://angularcrud-5866b.firebaseio.com",
+    projectId: "angularcrud-5866b",
+    storageBucket: "angularcrud-5866b.appspot.com",
+    messagingSenderId: "678275787966"
 
   }
 };

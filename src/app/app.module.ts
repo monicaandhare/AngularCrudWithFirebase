@@ -7,8 +7,10 @@ import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
+import {ToastrModule} from 'ngx-toastr';
 import {environment} from '../environments/environment'
 import {FormsModule} from '@angular/forms'
+import  {EmployeeService}  from './employees/shared/employee.service'
 
 @NgModule({
   declarations: [
@@ -21,9 +23,11 @@ import {FormsModule} from '@angular/forms'
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FormsModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

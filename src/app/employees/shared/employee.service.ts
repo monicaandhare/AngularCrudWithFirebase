@@ -26,5 +26,19 @@ insertEmployee(employee:Employee){
     });
   
   }
+  updateEmployee(employee : Employee){
+    this.employeeList.update(employee.$key,
+      {
+        name: employee.name,
+        position: employee.position,
+        office: employee.office,
+        salary: employee.salary
+      });
+  }
+
+  deleteEmployee(emp:string){
+this.employeeList.remove(emp);
+
+  }
 }
 
